@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="javascript" src="js/script.js"></script>
+
+    <style>
+        .buttonalign {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+    </ul>
+
+    <h1>Playlist</h1>
+
+    <p>Like most people, I'm a big fan of music. To be honest, I was never really a playlist person up until recently when I finally got Spotify Premium (very good investment). Before that, I would just let YouTube run on autoplay and listen to whatever
+        came up (a lot of my friends would be cringing at the thought). But I would like to share some of my favorite songs with you. These are obviously not all of them, I have too many favorites to do that.</p>
+    <p>Please press the play button underneath each song name to listen, and press the pause button to stop.</p>
+
+    <p>★</p>
+
+    <!--Audio content learned for WEB in 8th grade-->
+
+    <h2>K-pop/J-pop</h2>
+
+
+    <img src="images/supercell" alt="Supercell" style="width: 300px; height: 300px; border-radius: 20px;">
+    <audio id="myAudio">
+        <source src="audio/Melt ❘ ❮Miraculous Ladybug❯ Animation - YouTube.webm" type="audio/ogg">
+        <source src="audio/Melt ❘ ❮Miraculous Ladybug❯ Animation - YouTube.webm" type="audio/mpeg">
+    </audio>
+
+    <p>Melt - Hatsune Miku - Supercell</p>
+
+    <div class="buttonalign">
+        <button onclick="playAudio()" type="button">Play Music</button>
+        <button onclick="pauseAudio()" type="button">Pause Music</button>
+    </div>
+    <p>I rarely listen to vocaloid songs, which is why this is actually a cover of the original. Further, it is much more calm and soothing than the music I normally listen to, but I think it is a good change of pace.</p>
+    <img src="images/persona" alt="Persona" style="width: 300px; height: 300px; border-radius: 20px;">
+    <audio id="myAudio2">
+                <source src="audio/BTS - Dionysus (방탄소년단 - Dionysus) [Color Coded Lyrics_Han_Rom_Eng_가사] - YouTube.webm" type="audio/ogg">
+                <source src="audio/BTS - Dionysus (방탄소년단 - Dionysus) [Color Coded Lyrics_Han_Rom_Eng_가사] - YouTube.webm" type="audio/mpeg">
+            </audio>
+
+    <p>Dionysus - BTS - Map of The Soul: Persona</p>
+
+    <div class="buttonalign">
+        <button onclick="playAudio2()" type="button">Play Music</button>
+        <button onclick="pauseAudio2()" type="button">Pause Music</button>
+    </div>
+    <p>Though this is not my favorite BTS song, and they have since come out with even more music, this was one of the first albums I got to watch them release. This is probably my favorite song on said album, and therefore it holds a special place in my
+        heart. This is a better representation of the music I listen to most often.</p>
+
+    <h2>Pop</h2>
+    <img src="images/pink.png" alt="Blow Me (One Last Kiss)" style="width: 300px; height: 300px; border-radius: 20px;">
+    <audio id="myAudio3">
+                <source src="audio/P!NK - Blow Me (One Last Kiss) - YouTube.webm" type="audio/ogg">
+                <source src="audio/P!NK - Blow Me (One Last Kiss) - YouTube.webm" type="audio/mpeg">
+            </audio>
+
+    <p>Blow Me (One Last Kiss) - P!NK - Blow Me (One Last Kiss)</p>
+    <div class="buttonalign">
+        <button onclick="playAudio3()" type="button">Play Music</button>
+        <button onclick="pauseAudio3()" type="button">Pause Music</button>
+    </div>
+    <p>I think P!NK is super underrated (even though she's pretty popular anyway) and I enjoy a lot of her music. This kind of goes to show that my taste in pop music tends to be 2000s-2010s throwbacks, though.</p>
+
+    <img src="images/stupidlove.png" alt="Stupid Love" style="width: 300px; height: 300px; border-radius: 20px;">
+    <audio id="myAudio4">
+                <source src="audio/Lady Gaga - Stupid Love (Official Music Video) - YouTube.webm" type="audio/ogg">
+                <source src="audio/Lady Gaga - Stupid Love (Official Music Video) - YouTube.webm" type="audio/mpeg">
+            </audio>
+    <p>Stupid Love - Lady Gaga - Chromatica</p>
+    <div class="buttonalign">
+        <button onclick="playAudio4()" type="button">Play Music</button>
+        <button onclick="pauseAudio4()" type="button">Pause Music</button>
+    </div>
+    <p>This song only came out in 2020 but I think it still gives 2010 vibes (maybe that's just Lady Gaga), which further proves my point about how I only listen to pop from 5-10 years ago.</p>
+
+    <p>★</p>
+
+    <p style="font-weight: bold;">Please note: I will have also mentioned this in the comments on the Canvas submission, but in case you missed it:</p>
+    <p>I was unable to get the audio to work on Firefox. I am not sure what the problem is, because the buttons and everything work just fine on Google Chrome. Please switch to Google Chrome just to verify that the music does work. Other than that, everything
+        else should be the same.</p>
+
+    <p>★</p>
+
+    <!--Learned how to do a footer and how to use an image as a link from W3 Schools-->
+
+    <footer>
+        <a href="https://www.instagram.com/lmckinley.28/">
+            <img src="images/instagramicon.png" alt="Instagram icon" style="width:50px;">
+        </a>
+        <a href="mailto: lmckinley@eastsideprep.org">
+            <img src="images/emailicon.png" alt="Email icon" style="width: 50px;">
+        </a>
+        <p style="font-size:small;">©2021 Logan McKinley</p>
+    </footer>
+
+    <script>
+        function playAudio() {
+            var x = document.getElementById("myAudio");
+            x.play();
+        }
+
+        function pauseAudio() {
+            var x = document.getElementById("myAudio");
+            x.pause();
+        }
+
+        function playAudio2() {
+            var x = document.getElementById("myAudio2");
+            x.play();
+        }
+
+        function pauseAudio2() {
+            var x = document.getElementById("myAudio2");
+            x.pause();
+        }
+
+        function playAudio3() {
+            var x = document.getElementById("myAudio3");
+            x.play();
+        }
+
+        function pauseAudio3() {
+            var x = document.getElementById("myAudio3");
+            x.pause();
+        }
+
+        function playAudio4() {
+            var x = document.getElementById("myAudio3");
+            x.play();
+        }
+
+        function pauseAudio4() {
+            var x = document.getElementById("myAudio3");
+            x.pause();
+        }
+    </script>
+
+
+</body>
+
+</html>
