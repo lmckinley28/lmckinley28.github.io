@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .image1 {
+            opacity: 1;
+            width: auto;
+            height: auto;
+            transition: .7s ease;
+            backface-visibility: hidden;
+            border-radius: 20px;
+        }
+        
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .contain {
+            position: relative;
+            width: auto;
+        }
+        
+        .contain:hover .image1 {
+            opacity: 0.3;
+        }
+        
+        .contain:hover .middle {
+            opacity: 1;
+        }
+        
+        .text {
+            background-color: rgb(151, 158, 243);
+            color: black;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+    </ul>
+
+    <h1>Home</h1>
+
+    <p style="font-weight: bold;">For my first project, I wanted to introduce myself and give you some information about me.</p>
+    <p>So, hello! I'm Logan and I'm a junior. I have been going to EPS since I was in 5th grade and I feel super old because of it. I like to make fun of pretty much all of my friends that came after 6th grade for not being part of the "OG group," but at
+        this point, we've all been here for a pretty long time. My experience with web design is limited to the mandatory WEB class 8th graders take as well as Web Design 1, which I took two years ago. You can imagine this <span style="font-style:italic">lengthy</span>        break has caused me to forget most of my knowledge. However, do not worry! That is the whole point of this website, and by the time I finish it, I should be all caught up to speed. </p>
+    <p>About this website, it is very simple with an overall "get to know me" theme. The home page you are on currently will just house my introduction and some fun facts about me. I also wanted to share my interests and activities that I do outside of school,
+        which you can read more about in on the interests page. Finally, you can listen to some of my music on the playlist page, just for fun. Enjoy!</p>
+
+    <p>★</p>
+
+    <!--CSS stuff I learned for Web 1-->
+    <div class="contain">
+        <img src="images/chickenlogan.PNG" alt="Baby Logan" class="image1" style="width: 30%;">
+        <div class="middle">
+            <div class="text">Baby Logan :)</div>
+        </div>
+    </div>
+    <h4>Look, it's me as a chicken. No, this was not for Halloween, my parents just got me a chicken outfit.</h4>
+
+
+    <p>★</p>
+
+    <h2>Rapid Fire Facts</h2>
+    <ol type="I">
+        <li><b>My favorite color is green</b></li>
+        Starting off with a <span style="font-style: italic;">very</span> exciting fact, my favorite color has been (and likely always will be) green my whole life.
+        <li><b>I am a sports addict</b></li>
+        Being an athlete has become such a big part of my personality that my friends have actually started making fun of me for how much I talk about playing multiple sports. I talk more about these in my interests page, but I spend the majority of my time outside
+        of school either on a field or in a gym.
+        <li><b>This is the only form of coding I enjoy</b></li>
+        Prior to taking WEB in 8th grade, I did not like any type of coding. At all. I assume the reason I like web design is because I like art in general, but who really knows.
+        <li><b>I am a hoarder</b></li>
+        Stationery, pretty rocks, keychains, stuffed animals, cool shoes. You name it, I probably hoard it. I keep receipts, tickets, notes, and other mementos from lots of experiences and I am constantly taking pictures when I go out with friends. I think this
+        is the result of having a horrendous memory and never wanting to be unprepared. I forget things easily, so I keep all of these things to make sure I have a way to remember.
+        <li><b>I'm considering becoming a pre-med student</b></li>
+        Originally, I wanted to go to law school because that was my mom's plan and I like arguing with people. But I'm taking advanced biology and it quickly became my favorite science. We just started working with autopsy reports, and I've started thinking
+        about doing this kind of thing in college.
+        <li><b>It's 1:09 AM</b></li>
+        Yup.
+    </ol>
+
+    <p>★</p>
+
+    <!--Learned how to do a footer and how to use an image as a link from W3 Schools-->
+
+    <footer>
+        <a href="https://www.instagram.com/lmckinley.28/">
+            <img src="images/instagramicon.png" alt="Instagram icon" style="width:50px;">
+        </a>
+        <a href="mailto: lmckinley@eastsideprep.org">
+            <img src="images/emailicon.png" alt="Email icon" style="width: 50px;">
+        </a>
+        <p style="font-size:small;">©2021 Logan McKinley</p>
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
