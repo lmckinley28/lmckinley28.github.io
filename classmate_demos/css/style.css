@@ -1,0 +1,117 @@
+/*Emerson's demo*/
+
+.module {
+    cursor: url("https://pngimage.net/wp-content/uploads/2018/05/cute-cursor-png-2.png"), auto;
+}
+
+.option-happy {
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+}
+
+.option-sad {
+    cursor: url("../images/sad.png"), auto;
+}
+
+.option-meh {
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;
+}
+
+
+/*Mickey's Demo*/
+
+* {
+    padding: 5;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sLink {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #000, #000 68%, #fff 60%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background 0.2s ease-out;
+    white-space: nowrap;
+}
+
+span {
+    position: relative;
+}
+
+span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 13px;
+    background: rgb(0, 0, 0);
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+}
+
+p:hover {
+    background-position: 0 11px;
+}
+
+span:hover:before {
+    transform: translateY(10px)
+}
+
+
+/*Myan's Demo*/
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#textdiv {
+    text-align: center;
+    position: fixed;
+    margin: 15%;
+    width: 70%;
+    background-color: white;
+    opacity: 80%;
+    padding: 2%;
+}
+
+#videoBG {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width: auto;
+        height: 100%;
+    }
+}
