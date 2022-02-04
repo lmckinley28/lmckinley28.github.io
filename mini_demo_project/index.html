@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Frosted Glass Demo</h1>
+    </div>
+
+    <div class="container2">
+        <div class="content">
+            <p>For this demo, I will show you how to create this frosted glass effect in CSS. This glass blur adds a cool overlay and allows you to have an interesting background without it clashing with your text.</p>
+            <p>Something I would like to note is that I have found two possible methods to use for this effect. One of them is much simpler and requires less CSS, but it is compatible with very few browsers. For this reason, I will only show you the first
+                one.
+            </p>
+            <hr>
+            <h2>Body</h2>
+            <p>You will first want to create a new <span style="color: rgb(107, 147, 233);">div</span> tag and give it the class <span style="color: rgb(243, 184, 74);">container</span>. We will return to this class later.</p>
+            <p>Next, link your CSS stylesheet. In that stylesheet, we will now be adding content to the <span style="color: rgb(240, 75, 75);">body</span> element. First, apply a background image of your choice. You will next apply this to your background:</p>
+            <pre>
+            <code>
+                body {
+                    background-attachment: fixed;
+                }
+            </code>
+           </pre>
+            <p>This is necessary because the children of the body will inherit the image and we want it to always be the same size.</p>
+            <p>You can now experiment with some sizing and other aspects of the background, but this is how my final <span style="color: rgb(240, 75, 75);">body</span> element looks in my CSS stylesheet:</p>
+            <pre>
+               <code>
+                 body {
+                     background-image: url(images/image.jpg);
+                     background-attachment: fixed;
+                     background-size: cover;
+                     display: grid;
+                     justify-content: center;
+                     height: 100vh;
+                     background-position: center;
+                     background-repeat: no-repeat;
+                 }
+               </code>
+           </pre>
+            <hr>
+            <h2>Container</h2>
+            <p>Going back to our <span style="color: rgb(243, 184, 74);">container</span> class, this is what we will use to actually create the frosted glass look. You can start off with applying a height and width for your box with the glass blur. I used
+                25rem for height and 40rem for width. </p>
+            <p>Next, apply some color with a box shadow:</p>
+            <pre>
+                <code>
+                .container {
+                    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+                }
+                </code>
+            </pre>
+            <p>There are some other necessary things to apply to this class just do contain the blur:</p>
+            <pre>
+                <code>
+                    .container {
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+                    }
+                </code>
+            </pre>
+            <p>I then messed around with some margin values and a border radius just to change the look of the box. These parts are not necessary, but I think they improve how it looks.</p>
+            <p>Lastly, I set the background to inherit, so my final <span style="color: rgb(243, 184, 74);">container</span> class looks like this:</p>
+            <pre>
+                <code>
+                    .container {
+                        width: 40rem;
+                        height: 25rem;
+                        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+                        border-radius: 5px;
+                        position: relative;
+                        z-index: 1;
+                        background: inherit;
+                        overflow: hidden;
+                        margin: 100px auto;
+                    }
+                </code>
+            </pre>
+            <p>But you'll notice that this has not created the frosted glass effect at all, just created a box with a shadow. To create the blur, we will use a <span style="color: rgb(164, 142, 226);">pseudo element</span> of our <span style="color: rgb(243, 184, 74);">container</span>                class.</p>
+            <p>First we will apply a new box shadow, as well as the following content:</p>
+            <pre>
+                <code>
+                    .container:before {
+                        content: "";
+                        position: absolute;
+                        background: inherit;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+                    }
+                </code>
+            </pre>
+            <p>Finally, the last thing we need to apply to actually give it the blur is this:</p>
+            <pre>
+                <code>
+                    .container:before {
+                        filter: blur(10px);
+                    }
+                </code>
+            </pre>
+            <p>And just like before, you can mess around with the spacing. My final <span style="color: rgb(164, 142, 226);">pseudo element</span> looks like this:</p>
+            <pre>
+                <code>
+                    .container:before {
+                        content: "";
+                        position: absolute;
+                        background: inherit;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0; 
+                        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+                        filter: blur(10px);
+                        margin: -20px;
+                    }
+                </code>
+            </pre>
+            <hr>
+            <p>And there you go, you have successfully created the frosted glass look. If you would like to add text/content inside like what I'm doing, just put everything inside the <span style="color: rgb(107, 147, 233);">div</span> with the <span style="color: rgb(243, 184, 74);">container</span>                class. From there you can mess around with the alignment and other stylistic elements of your text with CSS like normal.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
