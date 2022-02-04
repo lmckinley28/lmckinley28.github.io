@@ -37,7 +37,7 @@ body {
 
 .container2 {
     width: 60rem;
-    height: 210rem;
+    height: 235rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
     position: relative;
@@ -77,4 +77,11 @@ h1 {
 
 pre {
     text-align: left;
+}
+
+pre code {
+    background: rgba(204, 243, 255, 0.3);
+    display: block;
+    color: rgb(233, 235, 252);
+    border-radius: 10px;
 }
