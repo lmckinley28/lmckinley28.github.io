@@ -35,6 +35,10 @@
         border: 2px solid;
     }
     
+    .logo img {
+        height: 100px;
+    }
+    
     .nav {
         grid-column: 3/11;
         grid-row: 1;
@@ -169,7 +173,7 @@
     .casestudyinfo:hover,
     .casestudy1:hover,
     .casestudy2:hover {
-        background: url("images/fishlogo.png");
+        background-image: url("images/casestudyphoto1.jpg");
     }
     
     .space2 {
@@ -197,6 +201,11 @@
         border-bottom: 2px solid;
     }
     
+    .project2 img {
+        height: 100px;
+        padding-top: 400px;
+    }
+    
     .space3 {
         grid-column: 1;
         grid-row: 12/17;
@@ -222,7 +231,7 @@
     
     .description {
         grid-column: 1/5;
-        grid-row: 9/16;
+        grid-row: 6/12;
         border-left: 2px solid;
         border-right: 2px solid;
         border-bottom: 2px solid;
@@ -230,23 +239,52 @@
     
     .mainphoto {
         grid-column: 5/20;
-        grid-row: 9/15;
+        grid-row: 6/11;
         border-right: 2px solid;
         border-bottom: 2px solid;
+    }
+    
+    .mainphoto img {
+        padding-top: 40px;
+        padding-left: 150px;
     }
     
     .quotebannertop {
         grid-column: 5/20;
-        grid-row: 15/18;
+        grid-row: 11/16;
         border-right: 2px solid;
         border-bottom: 2px solid;
+        text-align: center;
+    }
+    
+    .quotebannertop img {
+        height: 100px;
     }
     
     .quotebannerbottom {
         grid-column: 1/5;
-        grid-row: 16/18;
+        grid-row: 12/16;
         border-left: 2px solid;
         border-bottom: 2px solid;
+    }
+    
+    .singleworld img {
+        height: 100px;
+    }
+    
+    .comesfrom img {
+        height: 100px;
+        padding-left: 620px;
+    }
+    
+    .hugenumber img {
+        height: 100px;
+        padding-left: 60px;
+    }
+    
+    .fragments img {
+        height: 100px;
+        padding-left: 220px;
     }
     
     .description h3,

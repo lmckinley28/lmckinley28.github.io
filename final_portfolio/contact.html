@@ -12,7 +12,11 @@
 <body>
 
     <div class="wrapper">
-        <div class="logo"></div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/largelogo.png" alt="">
+            </a>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="about.html">Profile</a></li>
@@ -21,7 +25,12 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="music">Music</div>
+        <div class="music">
+            <div class="button">
+                <p>Music</p>
+                <img src="images/greenplaybutton.png" id="icon">
+            </div>
+        </div>
         <div class="insta">
             <p>insert instagram post link gallery</p>
         </div>
@@ -93,7 +102,27 @@
             </footer>
         </div>
     </div>
+    <!--audio controls adapted from https://www.youtube.com/watch?v=w5fCIhI0FyE-->
 
+    <audio id="mySong">
+    <source src="audio/silverwood.mp3" type="audio/mp3">
+</audio>
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (mySong.paused) {
+                mySong.play();
+                mySong.loop = true;
+                icon.src = "images/pausebutton.png"
+            } else {
+                mySong.pause();
+                icon.src = "images/greenplaybutton.png"
+            }
+
+        }
+    </script>
 </body>
 
 </html>
